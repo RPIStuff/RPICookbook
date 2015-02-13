@@ -1,0 +1,57 @@
+{% extends 'recipeinfo/base_recipeinfo.html' %}
+{% load thumbnail %}
+
+{% block metatitle %}Recipe | {{ product.metatitle }}{% endblock %}
+{% block metakeywords %}{% if product.metakeywords %}{{ product.metakeywords }}{% else %}{% endif %}{% endblock %}
+{% block metadescription %}{{ product.body|striptags|truncatechars:185 }}{% endblock %}
+{% block canonical_url %}http://www.henryoscar.com/gallery/{{ product.slug }}/{% endblock %}
+
+{% block ogtitle %}{{ product.metatitle }}{% endblock %}
+{% block ogtype %}product{% endblock %}
+{% block ogimage %}http://www.henryoscar.com/media/{{ product.featuredimage }}{% endblock %}
+{% block ogurl %}{{ request.build_absolute_uri }}{{ object.get_absolute_url }}{% endblock %}
+{% block ogdescription %}{{ product.body|striptags|truncatechars:185 }}{% endblock %}
+
+{% block jumbotron %}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>{% block title %}<a href="/"><img src="/static/media/{{ course.logo }}" class="course-logo-header img-responsive" /></a> {{ product.title }}{% endblock %}</h1>
+        <!--
+        <p><a href="/about/" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        -->
+      </div>
+    </div>
+{% endblock %}
+
+{% block extranav %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="product-container">
+<div class="panel panel-default panel-body">
+
+
+<div class="row">
+{% if recipe %}
+
+    <div class="col-md-12">
+        <h2 class="text-center">{{ recipe.title }}</h2>
+<h3>Ingredients</h3>
+        <p>{{ recipe.ingredients }}</p>
+<h3>Method</h3>
+	<p>{{ recipe.method }}</p>
+<h3>Sugar Level</h3>
+	<p><img src="/static/thm_dolphin/css/{{ recipe.sugarlevel }}.png"></img></p>    </div>
+</div>
+{% else %}
+<p>No recipe information</p>
+{% endif %}
+
+</div>
+</div>
+
+{% endblock %}

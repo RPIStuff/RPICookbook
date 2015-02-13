@@ -1,0 +1,28 @@
+{% extends 'pi_main/base.html' %}
+{% load thumbnail %}
+
+{% block metatitle %}Home{% endblock %}
+{% block metakeywords %}recipes, food, healthy, lifestyle{% endblock %}
+{% block metadescription %}Raspberry Pi Cookbook{% endblock %}
+
+
+{% block content %}
+
+
+<div class='row'>
+<div class="col-md-12">
+<h1>Welcome to the Raspberry Pi Cookbook!</h1>
+<p>We have a wide range of Healthy recipes at your disposal, you can find them by clicking on the 'Recipes' tab at the top of our page or click 
+<!-- Random Generator Start (will use a fair amount of load with larger databases) -->
+{% if recipes %}
+{% for recipe in recipes %}
+<a href="recipe/{{ recipe.slug }}">here</a>
+{% endfor %}
+{% endif %}
+<!-- Random Generator End-->   
+for a random recipe. </p>
+</div>
+</div>
+
+
+{% endblock %}

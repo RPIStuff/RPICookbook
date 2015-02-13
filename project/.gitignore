@@ -1,0 +1,10 @@
+*.pyc
+*.pyo
+db.sqlite3
+*.db
+.DS_Store
+local_settings.py
+/static
+/pi_main/static/media/
+*~
+*.kate-swp

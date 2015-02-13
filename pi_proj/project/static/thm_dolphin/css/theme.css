@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Cabin Sketch';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin Sketch Regular'), local('CabinSketch-Regular'), url(http://themes.googleusercontent.com/static/fonts/cabinsketch/v6/d9fijO34zQajqQvl3YHRCXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+body {
+ padding-top: 70px;
+ padding-bottom: 30px;
+ background-color:#F3F3F3;
+}
+
+.jumbotron {
+background-color:#afafad;
+}
+
+.footer .well {
+background-color:#afafad;
+}
+
+footer {
+margin-top:20px;
+}
+
+.products {
+margin-bottom:10px;
+}
+
+hr {
+border-color:#CCC;
+}
+
+h1 { font-family: 'Cabin Sketch', cursive; }
+
+h2 { font-family: 'Shadows Into Light Two', Arial, serif; font-weight: 400; }
+
+h3 { font-family: 'Love Ya Like A Sister', Arial, serif; font-weight: 400; }
+
+p { font-family: 'Josefin Sans', Arial, cursive; font-weight: 400; font-size:1.2em;}
+
+.navbar-nav li { font-family: 'Special Elite', Arial, serif; font-weight: 400; }
+
+.nav-list li { font-family: 'Special Elite', Arial, serif; font-weight: 400; }
+
+.nav-footer li { font-family: 'Special Elite', Arial, serif; font-weight: 400; }
+
+a.navbar-brand { font-family: 'Special Elite', Arial, serif; font-weight: 600; }
+
+h2.no-top-margin {
+margin-top:0px;
+}
+
+.theme-dropdown .dropdown-menu {
+ position: static;
+ display: block;
+ margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+ margin: 5px 0;
+}
+
+.center { text-align:center; }
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+    
+.center-div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+    
+.panel-title {font-size:1.5em; min-height:60px; max-height:60px;}
+.fb-panel {min-height:100px;}
+
+.basket-table {border:1px; }
+
+.hidden-field {display:none;}

@@ -1,0 +1,76 @@
+{% extends 'recipeinfo/base_recipeinfo.html' %}
+{% load thumbnail %}
+
+{% block metatitle %}Recipes{% endblock %}
+{% block metakeywords %}{% endblock %}
+{% block metadescription %}{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+<div class="col-md-12">
+<h1>Welcome to the cookbook!</h1>
+<p>We are currently adding recipes to the database so please be patient while we update the site. <br />
+<h2>Some of the most popular recipes!</h2>
+{% if recipes %}
+    {% for recipe in recipes %}
+        <div class="col-md-4">
+        <div class="panel panel-default panel-index">
+        <a href="/recipe/{{ recipe.slug }}/">{% thumbnail recipe.featuredimage "300x300" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="img-responsive img-thumbnail center">
+{% endthumbnail %}</a>
+            <p class="panel-title text-center"><a href="/recipe/{{ recipe.slug }}/">{{ recipe.title }}</a></p>
+        </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No recipes currently available.</p>
+{% endif %}
+</div>
+</div>
+
+<!---
+<div class="row">
+<div class="col-md-12">
+<h2>All available categories in the Shop</h2>
+{% if categories %}
+    {% for category in categories %}
+        <div class="col-md-3">
+        <div class="panel panel-default panel-body">
+        <a href="/shop/{{ category.slug }}/">{% thumbnail category.featuredimage "300x300" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="img-responsive img-thumbnail center">
+{% endthumbnail %}</a>
+            <p class="panel-title text-center"><a href="/shop/{{ category.slug }}/">{{ category.title }}</a></p>
+        </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No categories currently available.</p>
+{% endif %}
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<h2>Popular products people like to buy</h2>
+{% if promoted_products %}
+    {% for product in promoted_products %}
+        <div class="col-md-3">
+        <div class="panel panel-default panel-body">
+        <a href="/shop/{{ product.slug }}/">{% thumbnail product.featuredimage "300x300" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="img-responsive img-thumbnail center">
+{% endthumbnail %}</a>
+            <p class="panel-title text-center"><a href="/shop/{{ product.slug }}/">{{ product.title }}</a></p>
+        </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No favourite products currently available.</p>
+{% endif %}
+</div>
+</div>
+
+---!>
+
+{% endblock %}

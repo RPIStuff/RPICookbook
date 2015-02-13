@@ -1,0 +1,98 @@
+
+
+/* navbar-fixed-top results in the top line being covered unless padding is added */
+body {
+    /*padding-top: 50px;*/
+/*     background-color:#002F2F; */
+/*     background-color:#BDC7CC; */
+}
+
+
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+li {color:green;}
+
+.jumbotron {
+    background-color:#0099FF;
+/*     background-image: url('/static/tc_main/img/header-background.png'); */
+    color:#FFFFFF;
+    padding: 0.5em 0.6em;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+.jumbotron h1 {font-size:3.5em;}
+
+table{
+border-collapse:collapse;
+border:1px solid black;
+}
+
+table td{
+border:1px solid black;
+padding:5px;
+}
+
+.content-container{
+/*     background-color:#EFECCA; */
+    padding-top:20px;
+    
+}
+
+/* .panel{background-color:#A7A37E;} */
+.panel{background-color:#F0FAFF;
+    margin-right:10px;
+}
+
+.iscategory-True{background-color:#99C2FF;}
+
+.panel-index{height:280px;}
+
+/* Customize container */
+/*@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}*/
+
+.course-logo {max-width:30px;float:left;}
+.course-logo-header {max-width:50px;float:left;}
+.course-logo-title {overflow:hidden;}
+.logo-navbar{max-height:30px;}
+
+footer{
+    background-color:#0099FF;
+    padding:20px;
+    color:#FFFFFF;
+}
+
+a {color:#0352A0;}
+
+.lesson-body{background-color:#F5FAFF;}
+.lesson-ready{background-color:#EBF5FF;}
+.lesson-connect{background-color:#E0F0FF;}
+.lesson-activate{background-color:#D6EBFF;}
+.lesson-obj{background-color:#CCE6FF;}
+.lesson-demonstrate{background-color:#C2E0FF;}
+.lesson-consolidate{background-color:#B8DBFF;}
+.lesson-extra1{background-color:#ADD6FF;}
+.lesson-uploads{background-color:#A3D1FF;}
